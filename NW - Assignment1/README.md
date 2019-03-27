@@ -3,7 +3,7 @@ The client ID is 1
 The payload sent is "HELLO" which is of length 5
 The segment number of the packets increases sequentially for each packet sent (correct order)
 
-Steps:
+#### Steps:
 - There are two C files udp_client1.c and udp_server1.c containing the client and server code.
 - The files are compiled by opening two separate terminals each for client and server.
 - Move to the directory containing the files using cd command.
@@ -29,16 +29,16 @@ Steps:
 - The server sends back ACK if received correctly or sends reject code incase of errors.
 - If the server doesnot respond within 3 seconds the packet is resent upto 3 times after which an error message "Server does not respond" is displayed. (This is tested by closing the server terminal)
 
-Types
-Data-0xfff1
-Ack-0xfff2
-Reject-0xfff3
+##### Types
+- Data-0xfff1
+- Ack-0xfff2
+- Reject-0xfff3
 
-Reject Codes
-Case2 - Out of Sequence - 0xfff4
-Case3 - Length mismatch - 0xfff5
-Case4 - End of packet missing - 0xfff6
-Case5 - Duplicate packet - 0xfff7
+##### Reject Codes
+- Case2 - Out of Sequence - 0xfff4
+- Case3 - Length mismatch - 0xfff5
+- Case4 - End of packet missing - 0xfff6
+- Case5 - Duplicate packet - 0xfff7
 
 
 
